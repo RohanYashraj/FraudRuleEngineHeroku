@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@102.4,558&family=Quicksand:wght@383&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body{
-    background-image:url(./images/bg.jpeg);
+    background-image:url(./images/bg3.jpg);
     background-size: cover;
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Bodoni Moda', serif;
 }
 
 .cardbg{
     border-radius: 15px 50px;
-    background-color: rgba(255, 255, 255);
+    background-color: rgba(255, 255, 255, .9);
     color: black;
     padding:30px;
 }
