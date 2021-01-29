@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@102.4,558&family=Quicksand:wght@383&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -7,12 +7,13 @@
 body{
     background-image:url(./images/bg.jpeg);
     background-size: cover;
-    font-family: 'Chelsea Market', cursive;
+    font-family: 'Inconsolata', monospace;
 }
 
 .cardbg{
-    background-color: rgba(0, 0, 0, 0.397);
-    color: white;
+    border-radius: 15px 50px;
+    background-color: rgba(255, 255, 255);
+    color: black;
     padding:30px;
 }
 
@@ -22,10 +23,10 @@ button{
     padding: 5px 30px;
     border-radius: 5px;
     color: white;
-    background: #D46731;
+    background: #000066;
 }
 .prediction{
     text-align: center;
-    color: white;
+    color: while;
     font-size: xx-large;
 }
