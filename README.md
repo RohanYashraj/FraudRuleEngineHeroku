@@ -1,6 +1,6 @@
-# <ins>Forest Fire Prediction Website</ins> 
+# <ins>Fraud Detection Rule-Engine</ins> 
 
-#### A website that predicts the percentage of a forest fire taking place based on oxygen,temperature and humidity content made using Logistic Regression and Flask.
+#### A website that identifies the fraudulent claims in automobile insurance made using Decision Trees and Flask.
 
-##### <ins> Output</ins> 
-![fire](https://user-images.githubusercontent.com/37765578/83130554-1e5f8280-a0fc-11ea-8031-083b3a359ee7.png)
+##### <ins>Output</ins> 
+![fraud](./static/images/ruleengine.PNG)
