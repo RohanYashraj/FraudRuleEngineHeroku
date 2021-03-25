@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Fraud Detection Rule-Engine</title>
+    <link rel="icon" href="https://www.flaticon.com/svg/vstatic/svg/1122/1122550.svg?token=exp=1611934641~hmac=1a3e9f986b3ff7eb77f667fc5beeb0e4" type="image/icon type">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<div class="container justify-content-center mt-2">
+    <h1 class="text-white mt-2">Fraud Detection Rule-Engine</h1>
+    <p></p>
+    <h4 class="text-white ">Identify the fraudulent claims</h4>
+    <br/>
+    <div class="column">
+        <div class="col-sm-12 col-lg-7 cardbg">
+            <div class="col-12 mt-3 mb-1">
+                <div class="form-group">
+                    <p align="justify">
+                        A business rules engine is a software system that executes one or more business rules in a runtime production environment. The rules might come from legal regulation, company policy, or other sources.
+                    </p>
+                    <p align="justify">
+                        With this fraud-detection rule-engine app, you can upload your data and get back predictions. The model is pre-trained which predicts whether claims instance from an automobile insurance passes the prevention stage. From these test, you would like to determine whether the claims should be accepted, rejected or it needs further investigation.
+                    </p>
+                    <p align="justify">
+                        To predict using this model, upload test data in csv format (you can change the code to read other data types) by using the button below.
+                        Then, go to the Download Predictions section in the sidebar to download the predictions.
+                    </p>
+                </div>
+                <div class="form-group">
+                    <div class="custom-file">
+                        <form method=post enctype=multipart/form-data>
+                            <input type="file" class="custom-file-input" id="customFile" name=file>
+                            <label class="custom-file-label" for="customFile">Choose a CSV file</label>
+                            <input type=submit value=Upload>
+                        </form>
+                        {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        <ul class=flashes>
+                            {% for message in messages %}
+                            {{ message }}
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                        {% endwith %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-4  d-flex align-items-center">
+            <h4 class="prediction">{{prediction}}</h4>
+        </div>
+    </div>
+</div>
+
+<br/>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src=".js/materialize.js"></script>
+<script src="js/init.js"></script>
+
+<script>
+// Add the following code if you want the name of the file appear on select
+$(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>
+
+</body>
+</html>
+

@@ -1,4 +1,4 @@
-Area,Oxygen,Temperature,Humidity,Fire Occurrence
+Area,Oxygen,Temperature,Humidity,FireOccurrence
 Jharkand,40,45,20,1
 Bangalore,50,30,10,1
 Ecuador,10,20,70,0
